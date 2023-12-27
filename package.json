@@ -1,16 +1,18 @@
 {
   "license": "MIT",
   "private": true,
-    "scripts": {
-      "dev": "bun --watch src/index.ts",
-      "build": "bun build src/index.ts",
-      "start": "NODE_ENV=production bun src/index.ts",
-      "test": "bun test"
-    },
+  "scripts": {
+    "dev": "bun --watch src/index.ts",
+    "build": "bun build src/index.ts",
+    "start": "NODE_ENV=production bun src/index.ts",
+    "test": "bun test"
+  },
   "devDependencies": {
     "@types/bun": "latest"
   },
   "dependencies": {
-    "elysia": "^0.8.5"
+    "@supabase/supabase-js": "^2.39.1",
+    "elysia": "^0.8.5",
+    "plaid": "^18.2.0"
   }
 }
