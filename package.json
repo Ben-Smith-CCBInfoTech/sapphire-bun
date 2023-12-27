@@ -1,11 +1,16 @@
 {
   "license": "MIT",
   "private": true,
-  "scripts": {
-    "start": "bun app.ts",
-    "dev": "bun --hot app.ts"
-  },
+    "scripts": {
+      "dev": "bun --watch src/index.ts",
+      "build": "bun build src/index.ts",
+      "start": "NODE_ENV=production bun src/index.ts",
+      "test": "bun test"
+    },
   "devDependencies": {
     "@types/bun": "latest"
+  },
+  "dependencies": {
+    "elysia": "^0.8.5"
   }
 }
