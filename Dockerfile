@@ -1,13 +1,13 @@
-# FROM oven/bun
-FROM imbios/bun-node
+FROM oven/bun
 WORKDIR /usr/src/app
 
 COPY package*.json bun.lockb ./
-COPY prisma ./prisma/
 RUN bun install
-RUN bun run generate
 COPY . .
 
 ENV NODE_ENV production
+
+RUN bun run drizzle:generate
+RUN bun run drizzle:push
 
 CMD [ "bun", "start" ]

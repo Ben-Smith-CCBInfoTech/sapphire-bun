@@ -6,19 +6,19 @@
     "build": "bun build src/index.ts",
     "start": "NODE_ENV=production bun src/index.ts",
     "test": "bun test",
-    "generate": "npx prisma generate"
+    "drizzle:generate": "drizzle-kit generate:mysql2",
+    "drizzle:push": "drizzle-kit push:mysql2",
+    "drizzle:seed": "bun run ./src/db/seed.ts"
   },
   "devDependencies": {
-    "@types/bun": "latest"
+    "@types/bun": "latest",
+    "drizzle-kit": "^0.20.10"
   },
   "dependencies": {
-    "@prisma/client": "^5.7.1",
     "@supabase/supabase-js": "^2.39.1",
+    "drizzle-orm": "^0.29.3",
     "elysia": "^0.8.5",
-    "plaid": "^18.2.0",
-    "prisma": "^5.7.1"
-  },
-  "prisma": {
-    "seed": "bun utils/seed.ts"
+    "mysql2": "^3.6.5",
+    "plaid": "^18.2.0"
   }
 }

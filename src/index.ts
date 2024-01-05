@@ -12,6 +12,9 @@ app
 console.log(
   `🦊 Elysia is running at http://${app.server?.hostname}:${app.server?.port}`
 );
+console.log(
+  `Database Connection URL is ${process.env.DATABASE_URL}`
+)
 
 // import { Elysia, t } from 'elysia'
 

@@ -1,5 +1,7 @@
-import { PrismaClient } from '@prisma/client';
+import { drizzle } from 'drizzle-orm/mysql2';
+import mysql from 'mysql2';
 
-const prisma = new PrismaClient();
+// Create the connection
+const poolConnection = mysql.createPool(process.env.DATABASE_URL as string);
 
-export default prisma;
+export const db = drizzle(poolConnection);
