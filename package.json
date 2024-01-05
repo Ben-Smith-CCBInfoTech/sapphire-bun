@@ -11,8 +11,13 @@
     "@types/bun": "latest"
   },
   "dependencies": {
+    "@prisma/client": "^5.7.1",
     "@supabase/supabase-js": "^2.39.1",
     "elysia": "^0.8.5",
-    "plaid": "^18.2.0"
+    "plaid": "^18.2.0",
+    "prisma": "^5.7.1"
+  },
+  "prisma": {
+    "seed": "bun utils/seed.ts"
   }
 }
