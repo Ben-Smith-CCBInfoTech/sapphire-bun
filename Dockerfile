@@ -5,7 +5,7 @@ WORKDIR /usr/src/app
 COPY package*.json bun.lockb ./
 COPY prisma ./prisma/
 RUN bun install
-RUN npx prisma generate
+RUN bun run generate
 COPY . .
 
 ENV NODE_ENV production
