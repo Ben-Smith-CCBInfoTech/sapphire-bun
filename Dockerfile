@@ -1,5 +1,5 @@
-FROM oven/bun
-
+# FROM oven/bun
+FROM imbios/bun-node
 WORKDIR /usr/src/app
 
 COPY package*.json bun.lockb ./
